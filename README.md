@@ -26,7 +26,7 @@ Note the install posix script "gradle-libpath/main/build/install/main/debug/main
 ### Problem this causes
 If we deploy what gradle produces to another machine, it will continue to look for the library on that absolute path. (Aka, on a production machine, it "ldd main" would look for "/gradle-libpath/main/build/lib/main/debug/liblibrary.so" which makes it less portable and troublesome to install.
 
-### How to use
+### With the PR version...
 If you use with the PR version https://github.com/gradle/gradle/pull/6176, you'll notice that it switches to leveraging the library path.
 ```
 /gradle-libpath/main/build/install/main/debug/lib> ldd main
